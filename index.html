@@ -1,35 +1,165 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Arthur — Portfólio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-<style>
-:root{
-  color-scheme:dark;
-  --bg:#0a0a0c; --panel:#141418; --line:#26262d; --ink:#f5f5f7; --muted:#9a9aa6; --pink:#19e6b8; --teal:#19e6b8; --wa:#25d366;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-*{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:300 18px/1.6 "Bricolage Grotesque",system-ui,sans-serif}
-.wrap{max-width:720px;margin:0 auto;padding:0 22px}
-nav{padding:20px 0;border-bottom:1px solid var(--line)}
-.logo{font-weight:800;font-size:1.7rem;letter-spacing:-.03em}
-.logo b{color:var(--pink);font-weight:800}
-.hero{padding:44px 0 56px;background:radial-gradient(120% 60% at 50% 0,#0a3a2e 0,transparent 70%)}
-.tag{display:inline-block;border:1px solid #0d5e4b;background:#082a22;color:var(--pink);border-radius:999px;padding:8px 18px;font-size:.9rem}
-h1{font-weight:500;font-size:clamp(2.5rem,11vw,4.4rem);line-height:1.02;letter-spacing:-.035em;margin:26px 0 0}
-h1 b{color:var(--pink);font-weight:800}
-.lead{color:var(--muted);margin:24px 0 0;max-width:36ch}
-.btn{display:flex;justify-content:space-between;align-items:center;margin-top:30px;background:var(--pink);color:#04130e;text-decoration:none;font-weight:500;padding:20px 26px;border-radius:16px}
-.btn.ghost{background:var(--panel);color:var(--ink);border:1px solid var(--line);margin-top:12px}
-.note{color:var(--muted);font-size:.9rem;margin:12px 0 0}
-.photo{margin:40px 0 0;border-radius:28px;border:1px solid #0d5e4b;background:linear-gradient(160deg,#0a3a2e,#141418);box-shadow:0 0 60px rgba(25,230,184,.22);overflow:hidden;aspect-ratio:3/2}
-.photo img,.photo svg{width:100%;height:100%;object-fit:cover;display:block}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:22px 16px;padding:44px 0;border-top:1px solid var(--line)}
-.stats strong{display:block;font-size:2.2rem;font-weight:800;letter-spacing:-.03em;line-height:1.1}
-.stats span{color:
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0c">
+  <meta name="description" content="Portfólio de Arthur, desenvolvedor web em formação.">
+  <title>Arthur — Desenvolvedor Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Navegação principal">
+      <a class="logo" href="#inicio">arthur<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> DISPONÍVEL PARA OPORTUNIDADES</p>
+        <h1>Transformo ideias em <span>experiências digitais.</span></h1>
+        <p class="lead">Olá! Sou Arthur, desenvolvedor web em formação. Estou criando projetos com foco em interfaces modernas, responsivas e fáceis de usar.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projetos">Ver meus projetos ↗</a>
+          <a class="btn btn-secondary" href="#contato">Vamos conversar</a>
+        </div>
+        <p class="micro-note"><span class="mono">HTML</span> · <span class="mono">CSS</span> · <span class="mono">JavaScript</span></p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="photo-frame">
+          <img src="assets/arthur-dev.jpg" alt="Imagem de destaque de um desenvolvedor diante de código" fetchpriority="high">
+          <div class="photo-label">
+            <span class="label-icon">✳</span>
+            <span><strong>Construindo o futuro</strong><small>Uma linha de código por vez</small></span>
+          </div>
+        </div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <span class="floating-code code-one">{"criatividade": true}</span>
+        <span class="floating-code code-two">console.log("Olá!")</span>
+      </div>
+    </section>
+
+    <section class="stats wrap" aria-label="Resumo">
+      <div><strong>01</strong><span>Curiosidade para aprender</span></div>
+      <div><strong>02</strong><span>Foco em projetos reais</span></div>
+      <div><strong>03</strong><span>Evolução constante</span></div>
+    </section>
+
+    <section class="section wrap" id="sobre">
+      <div class="section-heading">
+        <p class="eyebrow">01 / SOBRE MIM</p>
+        <h2>Aprendizado com <span>propósito.</span></h2>
+      </div>
+      <div class="about-copy">
+        <p>Sou um desenvolvedor web em formação, motivado por tecnologia, criatividade e resolução de problemas. Meu objetivo é transformar o que aprendo em soluções úteis, acessíveis e bem construídas.</p>
+        <p>Estou desenvolvendo minhas habilidades em HTML, CSS e JavaScript e buscando oportunidades para colaborar, aprender com profissionais e crescer na área.</p>
+      </div>
+    </section>
+
+    <section class="section wrap" id="habilidades">
+      <div class="section-heading">
+        <p class="eyebrow">02 / HABILIDADES</p>
+        <h2>Ferramentas que estou <span>desenvolvendo.</span></h2>
+      </div>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <span class="skill-symbol">5</span>
+          <h3>HTML5</h3>
+          <p>Estrutura semântica para páginas organizadas e acessíveis.</p>
+          <span class="skill-status">EM DESENVOLVIMENTO</span>
+        </article>
+        <article class="skill-card">
+          <span class="skill-symbol">✳</span>
+          <h3>CSS3</h3>
+          <p>Layouts responsivos, tipografia, cores e detalhes visuais.</p>
+          <span class="skill-status">EM DESENVOLVIMENTO</span>
+        </article>
+        <article class="skill-card">
+          <span class="skill-symbol">JS</span>
+          <h3>JavaScript</h3>
+          <p>Interatividade e comportamento dinâmico para interfaces web.</p>
+          <span class="skill-status">EM DESENVOLVIMENTO</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="projetos">
+      <div class="section-heading">
+        <p class="eyebrow">03 / PROJETOS</p>
+        <h2>Pequenos passos. <span>Projetos reais.</span></h2>
+        <p class="section-intro">Conheça meus trabalhos e acompanhe minha evolução na programação.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-top"><span class="project-number">PROJETO 01</span><span class="project-arrow">↗</span></div>
+          <div class="project-art art-green">
+            <div class="mock-window">
+              <div class="mock-dots"><i></i><i></i><i></i></div>
+              <div class="mock-line long"></div>
+              <div class="mock-line medium"></div>
+              <div class="mock-block"></div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Portfólio pessoal</h3>
+            <p>Uma página para apresentar minhas habilidades, projetos e formas de contato.</p>
+            <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <a class="text-link" href="#contato">Falar sobre o projeto ↗</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-number">PROJETO 02</span><span class="project-arrow">↗</span></div>
+          <div class="project-art art-purple">
+            <div class="mini-dashboard"><span></span><span></span><span></span><b></b></div>
+          </div>
+          <div class="project-info">
+            <h3>Próximo projeto</h3>
+            <p>Este espaço poderá apresentar um novo site ou aplicação que você desenvolver.</p>
+            <div class="chips"><span>Web</span><span>Em breve</span></div>
+            <a class="text-link" href="#contato">Entre em contato ↗</a>
+          </div>
+        </article>
+      </div>
+      <p class="note">Substitua os exemplos pelos seus projetos reais antes de divulgar o portfólio.</p>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <div class="wrap contact-inner">
+        <p class="eyebrow">04 / CONTATO</p>
+        <h2>Tem uma ideia?<br><span>Vamos conversar.</span></h2>
+        <p>Estou aberto a oportunidades, projetos e conexões com pessoas da área de tecnologia.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:SEUEMAIL@exemplo.com">Enviar e-mail ↗</a>
+          <a class="btn btn-secondary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+        </div>
+        <p class="contact-hint">Lembre-se de substituir os dados de exemplo pelos seus contatos.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="logo" href="#inicio">arthur<span>.</span></a>
+      <p>Feito com cuidado, curiosidade e código.</p>
+      <a href="#inicio" class="back-top">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+          </html>
+          
